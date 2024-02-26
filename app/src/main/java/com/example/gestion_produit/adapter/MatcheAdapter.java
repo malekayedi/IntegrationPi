@@ -15,16 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.gestion_produit.R;
 import com.example.gestion_produit.RecycleViewOnItemClick;
-import com.example.gestion_produit.model.Match;
+import com.example.gestion_produit.model.Matche;
 
 import java.util.List;
 
 public class MatcheAdapter extends RecyclerView.Adapter<MatcheAdapter.MatchviewHolder> {
     Context context;
-    List<Match> MatchList;
+    List<Matche> MatchList;
     private RecycleViewOnItemClick recycleViewOnItemClick;
 
-    public MatcheAdapter(Context context, List<Match> matchList, RecycleViewOnItemClick recycleViewOnItemClick) {
+    public MatcheAdapter(Context context, List<Matche> matchList, RecycleViewOnItemClick recycleViewOnItemClick) {
         this.context = context;
         MatchList = matchList;
         this.recycleViewOnItemClick=recycleViewOnItemClick;
@@ -39,7 +39,7 @@ public class MatcheAdapter extends RecyclerView.Adapter<MatcheAdapter.MatchviewH
 
     @Override
     public void onBindViewHolder(@NonNull MatcheAdapter.MatchviewHolder holder, @SuppressLint("RecyclerView") int position) {
-        Match item= MatchList.get(position);
+        Matche item= MatchList.get(position);
         holder.nameplayer2.setText(item.getNameplayer2());
         holder.nameplayer1.setText(item.getNameplayer1());
         holder.Datematch.setText(item.getDateMatch());
