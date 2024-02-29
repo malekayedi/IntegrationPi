@@ -15,12 +15,16 @@
         />
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
+    android:background="@drawable/_26438581_1569448793832070_4256052230514154871_n"
+
     android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
+
+
         android:baselineAligned="false"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +37,8 @@
             android:layout_width="@dimen/noWidth"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:id="@+id/player1"
+
             android:orientation="vertical">
 
             <TextView
@@ -146,6 +152,7 @@
             android:layout_width="@dimen/noWidth"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:id="@+id/player2"
             android:orientation="vertical">
 
             <TextView

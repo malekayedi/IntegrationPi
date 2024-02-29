@@ -6,6 +6,8 @@ import android.media.RouteListingPreference;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,6 +35,8 @@ public class HomeActivity extends AppCompatActivity {
    DrawerLayout drawerLayout;
    NavigationView navigationView;
    ActionBarDrawerToggle actionBarDrawerToggle;
+   ImageView product,news,ticket,matches,chatbot;
+   LinearLayout Rules;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -47,6 +51,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        product=findViewById(R.id.Product_acceuil);
+        news=findViewById(R.id.news_acceuil);
+        ticket=findViewById(R.id.ticket_acceuil);
+        matches=findViewById(R.id.matches_acceuil);
+        chatbot=findViewById(R.id.Chatbot);
+        Rules=findViewById(R.id.Rules);
   drawerLayout =findViewById(R.id.drawerlayout);
   navigationView=findViewById(R.id.nav_view);
   actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
@@ -57,7 +67,18 @@ public class HomeActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-  navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
+        chatbot.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, ChatBotActivity.class)));
+        ticket.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, TerrainActivity.class)));
+        Rules.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, RulesActivity.class)));
+
+        product.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, MainActivity.class)));
+        news.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, com.example.gestion_produit.News.MainActivity.class)));
+        matches.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, MatchActivity.class)));
+       // product.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, MainActivity.class)));
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
       @Override
       public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 

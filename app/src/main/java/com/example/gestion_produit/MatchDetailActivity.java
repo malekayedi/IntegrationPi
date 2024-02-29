@@ -4,12 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.gestion_produit.front.CartActivity;
+import com.example.gestion_produit.model.Matche;
 
 public class MatchDetailActivity extends AppCompatActivity {
 ImageView img1,img2;
 TextView name1,name2,score1,score2,date;
+LinearLayout player1,player2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +26,9 @@ TextView name1,name2,score1,score2,date;
         name2=findViewById(R.id.nameplayer2);
         score1=findViewById(R.id.scoreplay1);
         score2=findViewById(R.id.scoreplay2);
+        player1=findViewById(R.id.player1);
+        player2=findViewById(R.id.player2);
+
         date=findViewById(R.id.date);
         Intent intent=getIntent();
         String itemname1=intent.getStringExtra("name1");
@@ -37,10 +46,33 @@ TextView name1,name2,score1,score2,date;
         img1.setImageResource(itemimg1);
         img2.setImageResource(itemimg2);
 
+       // player1.setOnClickListener(v -> startActivity(new Intent(MatchDetailActivity.this, PlayerActivity.class)));
+        //player2.setOnClickListener(v -> startActivity(new Intent(MatchDetailActivity.this, PlayerActivity.class)));
 
 
+
+       player1.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               openPageActivity(itemname1);
+           }
+       });
+        player2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPageActivity(itemname2);
+            }
+        });
 
 
 
     }
+    private void openPageActivity(String nom) {
+        // Créer une nouvelle intention pour démarrer l'activité de page avec le numéro spécifié
+        Intent intent = new Intent(MatchDetailActivity.this, PlayerActivity.class);
+        intent.putExtra("name1", nom); // Passer le numéro à l'activité de page
+
+        startActivity(intent); // Démarrer l'activité
+    }
+
 }

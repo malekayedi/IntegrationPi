@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     tools:context=".PlayerActivity"
+    android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
     android:layout_height="match_parent">
 
 
@@ -21,11 +22,13 @@
         android:id="@+id/nameplayer"
         android:layout_width="171dp"
         android:layout_height="45dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="80dp"
         android:text="Malek Ayadi"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageplayer"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -43,11 +46,13 @@
         android:id="@+id/ageplayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:text="22"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/paysplayer"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/nameplayer" />
 
     <TextView
@@ -65,11 +70,13 @@
         android:id="@+id/paysplayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="68dp"
         android:text="Tunisie"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/ageplayer" />
 
     <LinearLayout

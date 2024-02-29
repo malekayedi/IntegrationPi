@@ -29,6 +29,12 @@ public class MatcheAdapter extends RecyclerView.Adapter<MatcheAdapter.MatchviewH
         MatchList = matchList;
         this.recycleViewOnItemClick=recycleViewOnItemClick;
     }
+    public MatcheAdapter(Context context, List<Matche> matchList) {
+        this.context = context;
+        MatchList = matchList;
+
+    }
+
 
     @NonNull
     @Override

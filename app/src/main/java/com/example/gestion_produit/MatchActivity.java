@@ -10,15 +10,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.gestion_produit.News.MyAdapter;
 import com.example.gestion_produit.adapter.MatcheAdapter;
+import com.example.gestion_produit.front.Constants;
+import com.example.gestion_produit.front.GitHubService;
+import com.example.gestion_produit.model.Blog;
 import com.example.gestion_produit.model.Matche;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MatchActivity extends AppCompatActivity implements RecycleViewOnItemClick {
 
@@ -27,6 +38,8 @@ public class MatchActivity extends AppCompatActivity implements RecycleViewOnIte
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    private String url= Constants.BASE_URL;
+
     private List<Matche> matchList=new ArrayList<Matche>();
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -42,19 +55,46 @@ public class MatchActivity extends AppCompatActivity implements RecycleViewOnIte
         setContentView(R.layout.activity_match);
         Matchrecycler=findViewById(R.id.MatchRecyler);
         Matchrecycler.setLayoutManager(new LinearLayoutManager(this));
-        matchList.add(new Matche("malek","badri",R.drawable.test1,R.drawable.test2,6,0,"12/12/2001"));
-        matchList.add(new Matche("malek","badri",R.drawable.test1,R.drawable.test2,4,0,"12/12/2001"));
-        matchList.add(new Matche("malek","badri",R.drawable.test1,R.drawable.test2,2,0,"12/12/2001"));
-        matchList.add(new Matche("malek","badri",R.drawable.test1,R.drawable.test2,3,0,"12/12/2001"));
-        matcheAdapter = new MatcheAdapter(getApplicationContext(), matchList,MatchActivity.this);
-        Matchrecycler.setAdapter(matcheAdapter);
+
+
         drawerLayout =findViewById(R.id.drawerlayoutmatch);
         navigationView=findViewById(R.id.nav_view_match);
         actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Initialize Retrofit and GitHubService
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        GitHubService blogApi = retrofit.create(GitHubService.class);
+
+        // Retrieve blogs from API and update RecyclerView
+        Call<List<Matche>> call = blogApi.getAllMatch();
+
+        call.enqueue(new Callback<List<Matche>>() {
+            @Override
+            public void onResponse(Call<List<Matche>> call, Response<List<Matche>> response) {
+                if (response.isSuccessful()) {
+                    matchList = response.body();
+
+                    // Create and set adapter for RecyclerView
+                    matcheAdapter = new MatcheAdapter(getApplicationContext(), matchList, MatchActivity.this);
+                    Matchrecycler.setAdapter(matcheAdapter);
+                } else {
+                    // Handle API error
+                    Log.e("MainActivity", "Error retrieving Matches from API");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Matche>> call, Throwable t) {
+                // Handle network failure
+                Log.e("MainActivity", "Failed to retrieve Matches from API", t);
+            }
+        });
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eee">
+    android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
+
+   >
 
 
     <ImageButton
         android:id="@+id/like2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
 
         android:layout_marginStart="70dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="289dp"
-        android:background="@drawable/baseline_thumb_up_24"
+        android:background="@drawable/baseline_thumb_up_off_alt_24"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nblike2"
@@ -27,13 +29,13 @@
 
     <ImageButton
         android:id="@+id/dislike2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="289dp"
-        android:background="@drawable/baseline_thumb_down_24"
+        android:background="@drawable/baseline_thumb_down_off_alt_24"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nbdislike2"
@@ -116,14 +118,15 @@
 
     <TextView
         android:id="@+id/nblike2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="29dp"
         android:layout_below="@id/descriptiondt"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="89dp"
         android:layout_marginBottom="286dp"
         android:layout_toRightOf="@id/like2"
         android:text="0"
+        android:textSize="20sp"
         android:textColor="#959494"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dislike2"
@@ -132,8 +135,8 @@
 
     <TextView
         android:id="@+id/nbdislike2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="44dp"
+        android:layout_height="39dp"
         android:layout_below="@id/descriptiondt"
         android:layout_marginStart="3dp"
         android:layout_marginTop="15dp"
@@ -141,6 +144,8 @@
         android:layout_marginBottom="294dp"
         android:layout_toRightOf="@id/dislike2"
         android:text="0"
+        android:textSize="20sp"
+
         android:textColor="#959494"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

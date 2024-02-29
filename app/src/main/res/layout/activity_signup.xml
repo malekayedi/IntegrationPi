@@ -1,0 +1,134 @@
+<!-- res/layout/activity_signup.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#264228"
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_color"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_color"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textViewShowPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show"
+            android:textColor="#00796B"
+            android:padding="8dp"
+            android:clickable="true"
+            android:onClick="togglePasswordVisibility"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/editTextPassword"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_color"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_color"
+        android:hint="Height (M)"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_color"
+        android:hint="Weight (kg)"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <DatePicker
+        android:id="@+id/datePickerBirthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:descendantFocusability="blocksDescendants"
+        android:spinnersShown="true" />
+
+    <!-- ImageView for displaying the selected profile picture -->
+    <ImageView
+        android:id="@+id/imageViewProfilePicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/btnPickProfilePicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="pickProfilePicture"
+        android:text="Take a Picture"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="signUp"
+        android:text="Sign Up"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="signIn"
+        android:text="Sign in"
+        android:textColor="@color/black" />
+
+</LinearLayout>

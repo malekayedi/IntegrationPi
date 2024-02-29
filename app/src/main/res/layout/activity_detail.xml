@@ -19,11 +19,13 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="711dp"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:layout_below="@+id/barr"
+        android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
+        android:orientation="vertical"
         tools:context=".DetailedActivity">
 
         <TextView
@@ -65,7 +67,7 @@
             android:layout_marginTop="30dp"
             android:text="Duration:"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="34sp"
             android:textStyle="bold" />
 
         <TextView
@@ -75,8 +77,7 @@
             android:layout_marginStart="10dp"
             android:text="time"
             android:textColor="@color/black"
-            android:textSize="16sp" />
-
+            android:textSize="20sp" />
 
 
         <TextView
@@ -86,7 +87,7 @@
             android:layout_marginTop="20dp"
             android:text="Description:"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="34sp"
             android:textStyle="bold" />
 
         <TextView
@@ -96,7 +97,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/maggieDesc"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 </RelativeLayout>

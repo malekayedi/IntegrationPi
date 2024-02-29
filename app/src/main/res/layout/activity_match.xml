@@ -16,6 +16,8 @@
         />
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="wrap_content"
+    android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
+
     android:layout_height="wrap_content">
 
     <androidx.recyclerview.widget.RecyclerView

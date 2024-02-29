@@ -2,6 +2,8 @@ package com.example.gestion_produit.front;
 
 import com.example.gestion_produit.News.AddDescriptionResponse;
 import com.example.gestion_produit.model.Blog;
+import com.example.gestion_produit.model.Matche;
+import com.example.gestion_produit.model.Message;
 import com.example.gestion_produit.model.Products;
 
 import java.util.List;
@@ -11,11 +13,13 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Url;
 
 public interface GitHubService {
     @GET("/getProduit")
     Call<List<Products>> getAll();
-
+    @GET("/getMatche")
+    Call<List<Matche>> getAllMatch();
     @POST("/incrementLike/{productId}")
     Call<Void> incrementLike(@Path("productId") int productId);
 
@@ -38,4 +42,7 @@ public interface GitHubService {
 
     @POST("/decrementDislike/{blogId}")
     Call<Void> decrementDislike(@Path("blogId") int blogId);
+
+    @GET
+    Call<Message> getMessage(@Url String url);
 }

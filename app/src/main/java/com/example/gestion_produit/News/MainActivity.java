@@ -96,14 +96,14 @@ public class MainActivity extends AppCompatActivity implements RecycleViewOnItem
         });
 
         // Set up add blog button listener
-        ImageButton addbtn = findViewById(R.id.addbtn);
-        addbtn.setOnClickListener(new View.OnClickListener() {
+     //   ImageButton addbtn = findViewById(R.id.addbtn);
+      /*  addbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddBlog.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         // Configurer le capteur d'accéléromètre
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);

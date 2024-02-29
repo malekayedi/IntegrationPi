@@ -15,6 +15,8 @@
         />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
+
         android:layout_height="match_parent">
     <TextView
         android:id="@+id/emptyTxt"
@@ -214,6 +216,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="@+id/numcard"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/banner_background"
                     app:layout_constraintTop_toTopOf="@+id/textView17"
                     app:srcCompat="@drawable/arrow_detail" />
 
@@ -268,6 +271,7 @@
                     android:id="@+id/get_location_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/banner_background"
                     app:layout_constraintBottom_toBottomOf="@+id/adress"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView9"
@@ -299,7 +303,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:background="#65D629"
+                android:background="@drawable/banner_background"
                 android:text="Order Now"
 
                 android:textSize="18sp" />

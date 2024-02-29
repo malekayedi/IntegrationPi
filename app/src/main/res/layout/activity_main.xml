@@ -17,6 +17,7 @@
         />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
+        android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
         android:layout_height="wrap_content">
     <TextView
         android:id="@+id/textView5"
@@ -36,10 +37,10 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
-        android:background="#24ea2c"
+        android:background="@drawable/banner_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profil" />
+        app:srcCompat="@drawable/baseline_supervised_user_circle_24" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productRecyler"
@@ -57,7 +58,7 @@
         android:layout_height="56dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="8dp"
-        android:background="#24ea2c"
+        android:background="@drawable/banner_background"
         android:text="Your Cart"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -72,7 +73,7 @@
         android:layout_width="54dp"
         android:layout_height="53dp"
         android:layout_marginTop="16dp"
-        android:background="#24ea2c"
+        android:background="@drawable/banner_background"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toStartOf="parent"

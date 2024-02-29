@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RulesActivity"
+    android:background="@drawable/_20624288_361369160057816_6481144658014300638_n"
+android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#ABC648"
+        android:onClick="expand"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How many sets in tennis?"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rule1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In men’s singles events at Grand Slams, the matches are a best-of-five sets but in all other ATP Tour events, a men’s singles match is a best-of-three sets affair.
+Men’s doubles matches, in the ATP Tour and Grand Slams, are best-of-three sets except the Wimbledon, where they are best-of-five set matches.
+All women’s singles and doubles events - in Grand Slams and on the WTA Tour - are best-of-three sets matches."
+                android:textSize="18sp"
+                android:visibility="gone"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#ABC648"
+        android:onClick="expand2"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tennis scoring system ?"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rule2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A player or team has to win four points to win a game. Any game starts at 0-0 and the zero point in tennis is called love. The progression of points occurs as follows:
+First point - 15
+Second point - 30
+Third point - 40
+Fourth point - Game
+However, if both players win three points each in a game (i.e score is 40-40), then it's called a deuce."
+                android:textSize="18sp"
+                android:visibility="gone"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#ABC648"
+        android:onClick="expand3"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tennis shots?"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rule3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tennis players use a variety of angles, speed and technique to hit the ball in a certain direction or to deceive their opponents to win a point. Some common tennis strokes are as follows:
+            Forehand and backhand,Drop shot,Smash,Slice"
+                android:textSize="18sp"
+                android:visibility="gone"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#ABC648"
+        android:onClick="expand4"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to play tennis?"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rule4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A tennis match begins with the umpire doing a coin toss. The player who wins the toss can choose to serve, receive or pick the side from which they want to start the match."
+
+                android:textSize="18sp"
+                android:visibility="gone"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="#ABC648"
+        android:onClick="expand5"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:contentPadding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tennis equipment?"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rule5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tennis ball: According to the International Tennis Federation (ITF), a typical tennis ball should weigh between 56-59.4 grams with a diameter of 6.54-6.86 centimeters. They should be yellow or white in colour, though most balls are yellow.
+
+Tennis racket: A tennis racket cannot exceed 73.7 cm in length and 31.7 cm in width. The racket shall have a frame enclosing sturdy strings, usually made of nylon, interwoven in crossed and bonded pattern, and a handle.
+
+The player is required to hit the ball with the middle of the racket - the part with strings which is also known as hitting surface."
+                android:textSize="18sp"
+                android:visibility="gone"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

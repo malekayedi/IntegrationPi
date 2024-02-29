@@ -71,7 +71,7 @@ public class ShowDetailActivity extends AppCompatActivity {
                 managmentCart.insertProduit(object);
             }
         });
-        arrowback.setOnClickListener(v -> finish());
+//        arrowback.setOnClickListener(v -> finish());
     }
 
     private void initView() {
@@ -83,7 +83,7 @@ public class ShowDetailActivity extends AppCompatActivity {
         plusBtn=findViewById(R.id.plusBtn);
         minusBtn=findViewById(R.id.minusBtn);
         picproduit=findViewById(R.id.picproduit);
-        arrowback=findViewById(R.id.arrowback);
+      //  arrowback=findViewById(R.id.arrowback);
 
     }
 }

@@ -1,15 +1,36 @@
 package com.example.gestion_produit.model;
 
-import java.io.Serializable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+@Entity
 public class Matche implements Serializable {
+    @PrimaryKey(autoGenerate = true)
     Integer MatchId;
+    @ColumnInfo
+    @SerializedName("nameplayer1")
     String nameplayer1;
+    @ColumnInfo
+    @SerializedName("nameplayer2")
     String nameplayer2;
+    @ColumnInfo
+    @SerializedName("imageplayer1")
     int imageplayer1;
+    @ColumnInfo
+    @SerializedName("imageplayer2")
     int imageplayer2;
+    @ColumnInfo
+    @SerializedName("scoreplayer1")
     Integer scoreplayer1;
+    @ColumnInfo
+    @SerializedName("scoreplayer2")
     Integer scoreplayer2;
+    @ColumnInfo
+    @SerializedName("DateMatch")
     String DateMatch;
 
 
